@@ -1,0 +1,66 @@
+<%= link_to("Add Order", new_order_path)%>
+<table border = "1" width = "100%">
+	<tr>
+		<th>&nbsp;</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Amount</th>
+		<th>Currency Code</th>
+		<th>Paid</th>
+		<th>Street1</th>
+		<th>Street2</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Country</th>
+		<th>Zip</th>
+		<th>Created on</th>
+	</tr>
+	<% if @orders.empty?%>
+	<tr>
+		<td colspan="13"> No order has been placed yet.</td>
+	</tr>
+	<% else%>	
+		<% 
+		count = 0
+		@orders.each do |order|
+			count = count + 1
+		%>
+			<tr>
+				<td><%= count%></td>
+			</tr>
+			<tr>
+				<td><%= order.first_name%></td>
+			</tr>
+			<tr>
+				<td><%= order.last_name%></td>
+			</tr>
+			<tr>
+				<td><%= order.amount%></td>
+			</tr>
+			<tr>
+				<td><%= order.currency_code%></td>
+			</tr>
+			<tr>
+				<td><%= order.is_paid%></td>
+			</tr>
+			<tr>
+				<td><%= order.address_line1%></td>
+			</tr>
+			<tr>
+				<td><%= order.address_line2%></td>
+			</tr>
+			<tr>
+				<td><%= order.city%></td>
+			</tr>
+			<tr>
+				<td><%= order.state%></td>
+			</tr>
+			<tr>
+				<td><%= order.country%></td>
+			</tr>
+			<tr>
+				<td><%= order.created_at%></td>
+			</tr>
+		<% end%>
+	<% end%>
+	

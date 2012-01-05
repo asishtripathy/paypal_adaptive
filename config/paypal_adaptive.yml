@@ -1,0 +1,20 @@
+development:
+  environment: "sandbox"
+  username: seller_1317795301_biz_api1.gmail.com
+  password: 1317795339
+  signature: A1H23iJN2hjoY9lSz1zfPgukvsagA5fhUMvCFRYTM5RvEJfYN4CENqLq
+  application_id: 7QHUQWTP6B2YA
+
+test:
+  environment: "sandbox"
+  username: "sandbox_username"
+  password: "sandbox_password"
+  signature: "sandbox_signature"
+  application_id: "sandbox_app_id"
+
+production:
+  environment: "production"
+  username: "my_production_username"
+  password: "my_production_password"
+  signature: "my_production_signature"
+  application_id: "my_production_app_id"

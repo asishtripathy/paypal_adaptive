@@ -1,0 +1,49 @@
+<h3>New Order</h3>
+<%= link_to("Order List", orders_path)%>
+<%= form_for(@order, :method => :post) do |f|%>
+	<table>
+		<tr>
+			<td>First Name</td>
+			<td><%= f.text_field :first_name%></td>
+		</tr>
+		<tr>
+			<td>Last Name</td>
+			<td><%= f.text_field :last_name%></td>
+		</tr>
+		<tr>
+			<td>Amount</td>
+			<td><%= f.text_field :amount%></td>
+		</tr>
+		<tr>
+			<td>Currency Code</td>
+			<td><%= f.text_field :currency_code%></td>
+		</tr>
+		<tr>
+			<td>Street1</td>
+			<td><%= f.text_field :address_line1%></td>
+		</tr>
+		<tr>
+			<td>Street2</td>
+			<td><%= f.text_field :address_line2%></td>
+		</tr>
+		<tr>
+			<td>City</td>
+			<td><%= f.text_field :city%></td>
+		</tr>
+		<tr>
+			<td>State</td>
+			<td><%= f.text_field :state%></td>
+		</tr>
+		<tr>
+			<td>Country</td>
+			<td><%= f.text_field :country%></td>
+		</tr>
+		<tr>
+			<td>Zip</td>
+			<td><%= f.text_field :zip%></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><%= f.submit "Create Order" %></td>
+		</tr>
+<% end%>
